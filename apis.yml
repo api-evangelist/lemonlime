@@ -1,22 +1,107 @@
 aid: lemonlime
-name: Lemonlime
-description: Lemonlime is a company surfaced as a portfolio company of y-combinator and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+name: LemonLime
+description: >-
+  LemonLime is a San Francisco company (Y Combinator, Summer 2026) building what it
+  calls the AI knowledge layer for business — infrastructure that structures a
+  company's documents, processes, customer history, and institutional knowledge into
+  a foundation frontier models (GPT, Claude, Gemini) can retrieve and reason against.
+  The platform connects to existing business systems (CRMs, document stores,
+  ticketing, communication, and finance tools) over the Model Context Protocol (MCP),
+  builds a structured representation of how the business operates, then deploys
+  role- and workflow-specific AI agents on top of it, routing routine work to small
+  fast models and reserving frontier reasoning models for tasks that need them. It is
+  deliberately model-agnostic so the foundation survives frontier model generations.
+  LemonLime does not train on customer business data on any plan, offers optional
+  zero-data-retention, and markets compliance-aligned deployments for regulated
+  industries. It sells a packaged SaaS product to non-technical teams and publishes
+  no public developer API, SDKs, or API documentation as of this profile.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://lemonlime.ai/lemonlime-logo.png
 url: https://raw.githubusercontent.com/api-evangelist/lemonlime/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - y-combinator
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-yc-batch: Summer 2026
+x-location: San Francisco, CA, United States
+x-tier: profile
+x-tier-reason: >-
+  Enriched from stub. Real company profile harvested from the provider's own surface;
+  no public API surface exists to catalog (no OpenAPI, no developer docs, no SDKs).
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Artificial Intelligence
+- Knowledge Management
+- AI Agents
+- Workflow Automation
+- Model Context Protocol
+- Enterprise Software
+- SaaS
+- Y Combinator
 apis: []
+common:
+- type: Website
+  url: https://lemonlime.ai
+- type: About
+  url: https://lemonlime.ai/about
+- type: KnowledgeBase
+  url: https://lemonlime.ai/knowledge
+- type: Support
+  url: https://lemonlime.ai/support
+- type: Blog
+  url: https://lemonlime.ai/blog
+- type: Pricing
+  url: https://lemonlime.ai/pricing
+- type: SignUp
+  url: https://lemonlime.ai/signup
+- type: Login
+  url: https://lemonlime.ai/login
+- type: ContactSales
+  url: https://lemonlime.ai/contact-sales
+- type: Careers
+  url: https://lemonlime.ai/careers
+- type: TermsOfService
+  url: https://lemonlime.ai/terms
+- type: PrivacyPolicy
+  url: https://lemonlime.ai/privacy
+- type: GitHubOrganization
+  url: https://github.com/lemonlime-ai
+- type: Security
+  url: https://lemonlime.ai/security
+- type: Compliance
+  url: https://lemonlime.ai/security
+- type: VulnerabilityDisclosure
+  url: security/lemonlime-vulnerability-disclosure.yml
+- type: TrustCenter
+  url: security/lemonlime-trust-center.yml
+- type: DomainSecurity
+  url: security/lemonlime-domain-security.yml
+- type: WellKnown
+  url: well-known/lemonlime-well-known.yml
+- type: LLMsTxt
+  url: llms/lemonlime-llms.txt
+- type: Conformance
+  url: conformance/lemonlime-conformance.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
