@@ -1,0 +1,72 @@
+generated: '2026-07-19'
+method: searched
+probe: true
+source: https://lemonlime.ai/security
+url: https://lemonlime.ai/security
+description: >-
+  LemonLime has no trust.<domain> or security.<domain> subdomain (neither resolves);
+  its compliance posture is published on a single /security page. As an early-stage
+  (YC S2026) company its certification story is forward-looking rather than attained:
+  a SOC 2 examination is in progress with Oneleet and the report is not yet issued.
+  HIPAA/PCI are described as deployment-alignment options on the Enterprise plan, not
+  as held certifications. Recorded here exactly as published — no certification is
+  asserted as complete. The mechanical probe flagged "SOC 2" and "GDPR" as keyword
+  hits on this page; this searched capture qualifies those hits with their real status
+  and is kept in preference to the probe's flat certification list.
+certifications:
+  - name: SOC 2
+    status: in-progress
+    attained: false
+    auditor: Oneleet
+    availability: >-
+      To be made available to Customers and prospective Customers under NDA when issued.
+    evidence: >-
+      "We are completing a SOC 2 examination with the support of Oneleet, and we will
+      make our current report available to Customers and prospective Customers under
+      NDA when it is issued."
+  - name: GDPR
+    status: compliance-program
+    attained: true
+    note: >-
+      GDPR handling, subprocessor categories, and retention/deletion commitments are
+      published rather than third-party certified.
+  - name: HIPAA
+    status: deployment-alignment
+    attained: false
+    note: >-
+      Offered as a compliance-aligned deployment protocol on the Enterprise plan
+      ("security reviews (SOC 2, HIPAA, PCI)"), not a held certification.
+  - name: PCI DSS
+    status: deployment-alignment
+    attained: false
+    note: >-
+      Offered as a compliance-aligned deployment protocol on the Enterprise plan,
+      not a held certification.
+encryption:
+  in_transit: TLS 1.2 or higher
+  at_rest: AES-256
+data_handling:
+  trains_on_customer_data: false
+  trains_on_customer_data_statement: >-
+    "LemonLime does not train its models on customer business data — across every
+    plan, in every deployment."
+  zero_data_retention: optional
+  zero_data_retention_note: Available on request for the highest-privacy customers.
+  retention: >-
+    "We retain indexed content only while the relevant integration and account remain
+    active. When you disconnect an integration or close your account, we no longer
+    access the associated source content" and purge from backups on standard rotation.
+subprocessors:
+  published: false
+  location: Maintained in the Privacy Policy (https://lemonlime.ai/privacy)
+  categories: [cloud hosting providers, intelligence model providers, operational tooling]
+enterprise_controls:
+  - SSO/SAML (Enterprise plan)
+  - Permission controls and activity history (Team plan and above)
+  - Customer security reviews (Enterprise plan)
+docs:
+  - https://lemonlime.ai/security
+  - https://lemonlime.ai/privacy
+evidence:
+  - source: https://lemonlime.ai/security
+    keywords: [soc 2, oneleet, gdpr, tls 1.2, aes-256, subprocessors, retention]

@@ -1,0 +1,83 @@
+generated: '2026-07-19'
+method: searched
+source: https://lemonlime.ai/llms.txt
+description: >-
+  Standards conformance for LemonLime. Important scoping note: LemonLime publishes no
+  public API, no OpenAPI, and no developer documentation, so there is nothing to derive
+  spec-level conformance from — every assertion below comes from the provider's own
+  published claims on lemonlime.ai and its /llms.txt, or from a direct probe of the
+  domain. Notably, LemonLime is an MCP *client/consumer* (it integrates with customer
+  business systems over the Model Context Protocol); it does not publish an MCP server
+  of its own, so no MCPServer artifact or pointer is emitted.
+standards:
+  - id: mcp
+    name: Model Context Protocol
+    conforms: true
+    role: consumer
+    evidence: >-
+      "Integrates with the tools businesses already use (CRMs, document stores,
+      ticketing, communication, finance systems) via the Model Context Protocol (MCP)"
+      — https://lemonlime.ai/llms.txt
+    caveat: >-
+      Consumer-side integration only. No LemonLime-published MCP server, server URL,
+      or tool manifest was found on any host.
+  - id: llms-txt
+    name: llms.txt agent discovery convention
+    conforms: true
+    evidence: >-
+      A substantive, hand-authored /llms.txt is served at https://lemonlime.ai/llms.txt
+      (HTTP 200, 7,646 bytes) covering product, differentiators, pricing, and links.
+  - id: soc2
+    name: SOC 2
+    conforms: false
+    status: in-progress
+    evidence: >-
+      SOC 2 examination underway with Oneleet; report not yet issued
+      (https://lemonlime.ai/security).
+  - id: hipaa
+    name: HIPAA
+    conforms: false
+    status: deployment-alignment
+    evidence: >-
+      Marketed as an Enterprise-plan compliance-aligned deployment option, not a held
+      attestation.
+  - id: pci-dss
+    name: PCI DSS
+    conforms: false
+    status: deployment-alignment
+    evidence: >-
+      Marketed as an Enterprise-plan compliance-aligned deployment option, not a held
+      attestation.
+  - id: gdpr
+    name: GDPR
+    conforms: true
+    evidence: >-
+      GDPR handling, subprocessor disclosure, and data-retention/deletion commitments
+      published at https://lemonlime.ai/security and https://lemonlime.ai/privacy.
+  - id: saml-sso
+    name: SAML single sign-on
+    conforms: true
+    evidence: SSO/SAML listed as an Enterprise plan capability (https://lemonlime.ai/pricing).
+  - id: tls
+    name: TLS 1.2+ in transit
+    conforms: true
+    evidence: >-
+      "All data transmitted between you, the Services, and the third-party tools you
+      connect is encrypted using TLS 1.2 or higher."
+  - id: oauth2
+    conforms: false
+    evidence: No public API or OpenAPI declaring oauth2 security schemes.
+  - id: openapi
+    conforms: false
+    evidence: No OpenAPI/Swagger document published; /openapi.json returns 404.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: No public API surface to evaluate.
+  - id: asyncapi
+    conforms: false
+    evidence: No documented event, streaming, or webhook surface.
+  - id: rfc9116-security-txt
+    conforms: false
+    evidence: >-
+      /.well-known/security.txt returns 404 on the canonical apex host — see
+      well-known/lemonlime-well-known.yml.

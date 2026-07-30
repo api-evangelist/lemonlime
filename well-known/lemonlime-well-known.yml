@@ -1,0 +1,46 @@
+generated: '2026-07-19'
+method: searched
+description: >-
+  Results of probing the /.well-known/ discovery surface for LemonLime. LemonLime
+  publishes no public API and no API base host, so the only hosts available to probe
+  are the marketing/product site. https://www.lemonlime.ai answers 308 (permanent
+  redirect) on every path — the canonical host is the apex https://lemonlime.ai,
+  which returns 404 for every /.well-known/ document. No security.txt, no OIDC or
+  OAuth authorization-server metadata, no api-catalog, and no ai-plugin.json are
+  published. This is a recorded negative result, not a gap in the probe.
+hosts:
+  - host: https://lemonlime.ai
+    canonical: true
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://www.lemonlime.ai
+    canonical: false
+    note: Redirects (308) to the apex host for every path probed.
+    documents:
+      - path: /.well-known/security.txt
+        status: 308
+      - path: /.well-known/openid-configuration
+        status: 308
+      - path: /.well-known/oauth-authorization-server
+        status: 308
+      - path: /.well-known/api-catalog
+        status: 308
+      - path: /.well-known/ai-plugin.json
+        status: 308
+agent_surface:
+  llms_txt:
+    path: /llms.txt
+    status: 200
+    file: ../llms/lemonlime-llms.txt
+    note: >-
+      LemonLime does publish a substantive, hand-authored /llms.txt — the one real
+      agent-facing discovery document on the domain. Harvested verbatim.
