@@ -38,7 +38,7 @@ x-tier: profile
 x-tier-reason: >-
   Enriched from stub. Real company profile harvested from the provider's own surface;
   no public API surface exists to catalog (no OpenAPI, no developer docs, no SDKs).
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-19'
 tags:
