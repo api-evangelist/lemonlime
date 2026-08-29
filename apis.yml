@@ -39,6 +39,9 @@ accessModel:
   method: derived
 image: https://lemonlime.ai/lemonlime-logo.png
 url: https://raw.githubusercontent.com/api-evangelist/lemonlime/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "Real company profile harvested from the provider's own surface; no public API surface exists to catalog (no OpenAPI, no developer docs, no SDKs)."
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
