@@ -1,0 +1,39 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://lemonlime.com/pricing
+sources:
+- https://lemonlime.com/pricing
+- https://lemonlime.ai/pricing
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: tiered-subscription
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+published: true
+note: Prices shown as '$ 999 /mo' and '$ 2,499 /mo' with monthly/annual toggle; page states annual billing
+  saves 17% but no annual figures given.
+plan_count: 2
+currency: USD
+plans:
+- name: Business
+  price_text: '999'
+  price: 999
+  currency: USD
+  period: month
+  unit: business or brand
+  included_quota: Sales & marketing autopilot for a single business; daily leads with personalized outreach;
+    branded content and opportunities; 24/7 support resources
+- name: Portfolio
+  price_text: 2,499
+  price: 2499
+  currency: USD
+  period: month
+  unit: account (up to 5 businesses or brands)
+  included_quota: Manage up to 5 distinct businesses or brands; daily leads, content & opportunities;
+    dedicated 24/7 private support channel
