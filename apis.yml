@@ -79,6 +79,8 @@ tags_raw:
 - Workflow-Automation
 apis: []
 common:
+- type: Plans
+  url: plans/lemonlime-plans-pricing.yml
 - type: Website
   url: https://lemonlime.ai
 - type: About
