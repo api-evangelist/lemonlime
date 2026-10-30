@@ -64,37 +64,96 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-LemonLime is a San Francisco company (Y Combinator, Summer 2026) building an "AI knowledge
-layer for business" — infrastructure that structures a company's documents, processes,
-customer history, and institutional knowledge into a foundation frontier models can retrieve
-and reason against. It connects to existing business systems (CRMs, document stores, ticketing,
-communication, finance) over the Model Context Protocol and deploys role-specific AI agents on
-top of that layer.
+LemonLime is a San Francisco company (Y Combinator, Summer 2026) building what it calls the AI knowledge layer for business — infrastructure that structures a company's documents, processes, customer history, and institutional knowledge into a foundation frontier models (GPT, Claude, Gemini) can retrieve and reason against. The platform connects to existing business systems (CRMs, document stores, ticketing, communication, and finance tools) over the Model Context Protocol (MCP), builds a structured representation of how the business operates, then deploys role- and workflow-specific AI agents on top of it, routing routine work to small fast models and reserving frontier reasoning models for tasks that need them. It is deliberately model-agnostic so the foundation survives frontier model generations. LemonLime does not train on customer business data on any plan, offers optional zero-data-retention, and markets compliance-aligned deployments for regulated industries. It sells a packaged SaaS product to non-technical teams and publishes no public developer API, SDKs, or API documentation as of this profile.
 
-- Website: https://lemonlime.ai
-- Pricing: https://lemonlime.ai/pricing
-- Security: https://lemonlime.ai/security
-- GitHub: https://github.com/lemonlime-ai
+**Areas:** Company · Artificial Intelligence · Knowledge Management · AI Agents · Workflow Automation · MCP · Enterprise Software · Software-as-a-Service · Y Combinator
 
-Backed by: y-combinator (Summer 2026)
+## LemonLime on APIs.io
 
-## API surface
+Everything profiled for LemonLime is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/lemonlime/](https://apis.io/providers/lemonlime/)** — or go straight to one of the APIs or properties below.
 
-**LemonLime publishes no public developer API.** There is no OpenAPI or Swagger document, no
-developer portal or API reference, no SDKs or client libraries in any public registry, no CLI,
-and no documented webhook or event surface. LemonLime consumes the Model Context Protocol to
-integrate with customer systems; it does **not** publish an MCP server of its own. Artifact
-types that require an API contract to ground them (packages, mcp, skills, openapi, asyncapi,
-scopes, authentication, errors, conventions, data-model, sandbox, overlays) are therefore
-intentionally absent rather than fabricated.
+### Published properties
 
-## Artifacts
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-| Artifact | File | Method |
-|---|---|---|
-| llms.txt | `llms/lemonlime-llms.txt` | searched (verbatim, HTTP 200) |
-| Well-Known | `well-known/lemonlime-well-known.yml` | searched (all 404 — recorded negative) |
-| Vulnerability disclosure | `security/lemonlime-vulnerability-disclosure.yml` | searched |
-| Trust center | `security/lemonlime-trust-center.yml` | searched |
-| Domain security | `security/lemonlime-domain-security.yml` | probed |
-| Conformance | `conformance/lemonlime-conformance.yml` | searched |
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Lemonlime Domain Security](https://apis.io/security/lemonlime/lemonlime-domain-security/)
+- [Lemonlime Trust Center](https://apis.io/security/lemonlime/lemonlime-trust-center/)
+- [Lemonlime Vulnerability Disclosure](https://apis.io/security/lemonlime/lemonlime-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Lemonlime Plans Pricing](https://apis.io/plans/lemonlime/lemonlime-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://lemonlime.ai)
+- [Pricing](https://lemonlime.ai/pricing)
+- [Sign up](https://lemonlime.ai/signup)
+- [Support](https://lemonlime.ai/support)
+- [Blog](https://lemonlime.ai/blog)
+- [Security](https://lemonlime.ai/security)
+- [Compliance](https://lemonlime.ai/security)
+- [Terms of service](https://lemonlime.ai/terms)
+- [Privacy policy](https://lemonlime.ai/privacy)
+- [GitHub](https://github.com/lemonlime-ai)
+
+## API Evangelist rating
+
+**Kin Score 29.0** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 81.6 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 27.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/lemonlime/](https://apis.io/providers/lemonlime/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for LemonLime: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/lemonlime/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
